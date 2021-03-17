@@ -52,4 +52,16 @@ public class UserController {
         return i > 0 ? "success" : "error";
     }
 
+    @RequestMapping("/getupdateuser")
+    public String getUpdateUser(int id) {
+        User updateUser = userDao.getUpdateUser(id);
+        return JSON.toJSONString(updateUser);
+    }
+
+    @RequestMapping("/edituser")
+    public String editUser(@RequestBody User user) {
+        int i = userDao.editUser(user);
+        return i > 0 ? "success" : "error";
+    }
+
 }

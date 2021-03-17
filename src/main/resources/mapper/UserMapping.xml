@@ -33,6 +33,16 @@
     </insert>
 
     <delete id="deleteUser">
-        delete from easyuser where id=#{id}
+        delete from easyuser where id = #{id}
     </delete>
+
+    <select id="getUpdateUser" resultType="com.splade.sportplay.bean.User">
+        select * from easyuser where id = #{id}
+    </select>
+
+    <update id="editUser">
+        update easyuser
+        set username=#{username},password=#{password},email=#{email}
+        where id=#{id}
+    </update>
 </mapper>
