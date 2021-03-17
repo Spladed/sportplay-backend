@@ -33,6 +33,6 @@
     </insert>
 
     <delete id="deleteUser">
-        delete from easyuer where id=#{id}
+        delete from easyuser where id=#{id}
     </delete>
 </mapper>
