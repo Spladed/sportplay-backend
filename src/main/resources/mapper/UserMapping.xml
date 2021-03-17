@@ -25,4 +25,10 @@
     <update id="updateState">
         update easyuser set state=#{state} where id=#{id}
     </update>
+
+    <insert id="addUser">
+        insert into easyuser (username,password,email,role,state)
+        value
+        (#{username},#{password},#{email},#{role},#{state})
+    </insert>
 </mapper>
