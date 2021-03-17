@@ -31,4 +31,8 @@
         value
         (#{username},#{password},#{email},#{role},#{state})
     </insert>
+
+    <delete id="deleteUser">
+        delete from easyuer where id=#{id}
+    </delete>
 </mapper>

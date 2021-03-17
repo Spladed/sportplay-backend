@@ -18,4 +18,6 @@ public interface UserDao {
     public int updateState(Integer id,Boolean state);
 
     public int addUser(User user);
+
+    public int deleteUser(int id);
 }

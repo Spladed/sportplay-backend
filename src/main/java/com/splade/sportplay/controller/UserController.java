@@ -46,4 +46,10 @@ public class UserController {
         return i > 0 ? "success" : "error";
     }
 
+    @RequestMapping("/deleteuser")
+    public String deleteUser(int id) {
+        int i = userDao.deleteUser(id);
+        return i > 0 ? "success" : "error";
+    }
+
 }
