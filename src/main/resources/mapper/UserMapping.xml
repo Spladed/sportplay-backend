@@ -21,4 +21,8 @@
             where username like #{username}
         </if>
     </select>
+
+    <update id="updateState">
+        update easyuser set state=#{state} where id=#{id}
+    </update>
 </mapper>
