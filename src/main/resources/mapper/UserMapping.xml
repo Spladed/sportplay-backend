@@ -15,7 +15,7 @@
         LIMIT #{PageStart},#{pageSize}
     </select>
 
-    <select id="getUserContents" resultType="java.lang.Integer">
+    <select id="getUserCounts" resultType="java.lang.Integer">
         SELECT count(*) FROM easyUser
         <if test="username != null">
             where username like #{username}
