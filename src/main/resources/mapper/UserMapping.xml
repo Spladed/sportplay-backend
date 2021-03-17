@@ -8,15 +8,15 @@
     </select>
 
     <select id="getAllUser" resultType="com.splade.sportplay.bean.User">
-        SELECT * FROM easyUser
+        SELECT * FROM easyuser
         <if test="username != null">
             WHERE username like #{username}
         </if>
-        LIMIT #{PageStart},#{pageSize}
+        LIMIT #{pageStart},#{pageSize}
     </select>
 
     <select id="getUserCounts" resultType="java.lang.Integer">
-        SELECT count(*) FROM easyUser
+        SELECT count(*) FROM easyuser
         <if test="username != null">
             where username like #{username}
         </if>

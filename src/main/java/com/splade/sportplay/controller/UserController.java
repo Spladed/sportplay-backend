@@ -25,7 +25,7 @@ public class UserController {
 
         List<User> users = userDao.getAllUser("%" + queryInfo.getQuery() + "%", pageStart, queryInfo.getPageSize());
         HashMap<String, Object> res = new HashMap<>();
-        res.put("numbsers",numbers);
+        res.put("numbers",numbers);
         res.put("data",users);
         return JSON.toJSONString(res);
     }
